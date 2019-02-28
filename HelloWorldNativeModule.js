@@ -76,6 +76,11 @@ export default class ActivityDemoComponent extends Component {
             onPress={() => activityStarter.callJavaScript()}
             title='Call JavaScript from Java'
           />
+  <Button
+            onPress={() => activityStarter.launchArActivity()}
+            title='Launch ARActivity'
+          />
+
         </View>
       </View>
     );

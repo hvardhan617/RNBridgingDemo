@@ -129,6 +129,15 @@ public class ActivityStarterModule extends ReactContextBaseJavaModule {
         }
     }
 
+    @ReactMethod
+    void launchArActivity() {
+        Activity activity = getCurrentActivity();
+        if (activity != null) {
+            Intent intent = new Intent(activity, ARActivity.class);
+            activity.startActivity(intent);
+        }
+    }
+
 
     static void triggerAlert(@Nonnull String message) {
         eventEmitter.emit("MyEventValue", message);
